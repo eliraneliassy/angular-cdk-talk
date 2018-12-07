@@ -1,3 +1,33 @@
-<p>
-  drag-and-drop works!
-</p>
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .items {
+    width: 45%;
+    border: 1px solid red;
+    min-height: 300px;
+    display: inline-block;
+  }
+
+  .item{
+    width:100%;
+  }
+
+  .shopping-cart {
+    border: 1px solid green;
+  }
+</style>
+
+<div class="container">
+  <div class="items">
+    <app-item [item]="item" *ngFor="let item of items" class="item"></app-item>
+  </div>
+
+  <div class="items shopping-cart">
+    <app-item [item]="item" *ngFor="let item of shoppingCart"></app-item>
+  </div>
+
+
+</div>

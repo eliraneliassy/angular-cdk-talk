@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../item.interface';
+import { db } from '../db';
 
 @Component({
   selector: 'app-virtual-scroll',
@@ -10,11 +11,7 @@ export class VirtualScrollComponent implements OnInit {
 
   constructor() { }
 
-  itemExample: Item = {
-    title: 'Amazing towel for sale',
-    price: 40.00,
-    imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81K261QX%2BYL._SL1441_.jpg'
-  };
+  itemExample: Item = db[0];
 
   items: Item[] = [];
 
