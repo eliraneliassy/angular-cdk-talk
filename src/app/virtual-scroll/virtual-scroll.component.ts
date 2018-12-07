@@ -16,7 +16,7 @@ export class VirtualScrollComponent implements OnInit {
   items: Item[] = [];
 
   ngOnInit() {
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 10; i++) {
       this.items.push(this.itemExample);
     }
   }

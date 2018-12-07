@@ -8,6 +8,8 @@ import { DragAndDropComponent } from './drag-and-drop/drag-and-drop.component';
 import { HomeComponent } from './home/home.component';
 import { TableComponent } from './table/table.component';
 import { ItemComponent } from './item/item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,11 @@ import { ItemComponent } from './item/item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ScrollingModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
