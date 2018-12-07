@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +11,7 @@ import { TableComponent } from './table/table.component';
 import { ItemComponent } from './item/item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ScrollingModule
-
+    ScrollingModule,
+    DragDropModule
 
   ],
   providers: [],

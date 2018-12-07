@@ -21,12 +21,21 @@
 </style>
 
 <div class="container">
-  <div class="items">
-    <app-item [item]="item" *ngFor="let item of items" class="item"></app-item>
+  <div class="items" cdkDropList (cdkDropListDropped)="drop($event)"
+  [cdkDropListData]="items"
+  [cdkDropListConnectedTo]="shoppingCartList"
+  #itemsList="cdkDropList">
+    <app-item [item]="item" *ngFor="let item of items" class="item" cdkDrag
+    ></app-item>
   </div>
 
-  <div class="items shopping-cart">
-    <app-item [item]="item" *ngFor="let item of shoppingCart"></app-item>
+  <div class="items shopping-cart"
+  cdkDropList (cdkDropListDropped)="drop($event)"
+  [cdkDropListData]="shoppingCart"
+  [cdkDropListConnectedTo]="itemsList"
+  #shoppingCartList="cdkDropList">
+    <app-item [item]="item" *ngFor="let item of shoppingCart"
+    cdkDrag></app-item>
   </div>
 
 
