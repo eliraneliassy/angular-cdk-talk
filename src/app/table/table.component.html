@@ -1,4 +1,4 @@
-<table class="table">
+<!-- <table class="table">
   <tr>
     <th>
       Product title
@@ -15,4 +15,25 @@
       {{item.price}}
     </td>
   </tr>
+</table> -->
+
+
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+
+<table cdk-table [dataSource]="dataSorce" class="table" matSort>
+  <ng-container cdkColumnDef="title">
+    <th cdk-header-cell *cdkHeaderCellDef> Title </th>
+    <td cdk-cell *cdkCellDef="let element"> {{element.title}} </td>
+  </ng-container>
+
+  <ng-container cdkColumnDef="price">
+    <th cdk-header-cell *cdkHeaderCellDef mat-sort-header="price"> Price </th>
+    <td cdk-cell *cdkCellDef="let element"> {{element.price | currency}} </td>
+  </ng-container>
+
+  <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+  <tr cdk-row *cdkRowDef="let row; columns: displayedColumns;"></tr>
 </table>

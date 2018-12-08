@@ -12,6 +12,9 @@ import { ItemComponent } from './item/item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -27,8 +30,11 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     AppRoutingModule,
     BrowserAnimationsModule,
     ScrollingModule,
-    DragDropModule
-
+    DragDropModule,
+    CdkTableModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
