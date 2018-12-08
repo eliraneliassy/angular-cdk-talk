@@ -15,6 +15,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CdkTableModule } from '@angular/cdk/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { ButtonComponent } from './button/button.component';
+import { PortalModule } from '@angular/cdk/portal';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     DragAndDropComponent,
     HomeComponent,
     TableComponent,
-    ItemComponent
+    ItemComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     CdkTableModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    PortalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

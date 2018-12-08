@@ -1,4 +1,7 @@
-<cdk-virtual-scroll-viewport [itemSize]="300" 
-style="height: 500px;">
+<cdk-virtual-scroll-viewport [itemSize]="300" style="height: 500px;">
   <app-item [item]="item" *cdkVirtualFor="let item of items"></app-item>
 </cdk-virtual-scroll-viewport>
+
+<app-button>
+  <button class="btn btn-primary">Virtual Click</button>
+</app-button>
