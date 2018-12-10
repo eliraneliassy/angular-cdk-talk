@@ -8,6 +8,10 @@ import { DragAndDropComponent } from './drag-and-drop/drag-and-drop.component';
 import { HomeComponent } from './home/home.component';
 import { TableComponent } from './table/table.component';
 import { ItemComponent } from './item/item.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { PortalModule } from '@angular/cdk/portal';
+import { SearchInputComponent } from './search-input/search-input.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,16 @@ import { ItemComponent } from './item/item.component';
     DragAndDropComponent,
     HomeComponent,
     TableComponent,
-    ItemComponent
+    ItemComponent,
+    SearchInputComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ScrollingModule,
+    DragDropModule,
+    PortalModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
