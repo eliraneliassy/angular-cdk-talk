@@ -20,20 +20,31 @@
   }
 </style>
 
+
+
 <div class="container">
+
+  <app-search-input>
+      <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2"
+          type="search" 
+          placeholder="Search For Drag and Drop">
+        </form>
+  </app-search-input>
+
   <div class="items" cdkDropList (cdkDropListDropped)="drop($event)"
   [cdkDropListData]="items"
-  [cdkDropListConnectedTo]="shoppingCartList"
-  #itemsList="cdkDropList">
-    <app-item [item]="item" *ngFor="let item of items" class="item" cdkDrag
-    ></app-item>
+  #itemsList="cdkDropList"
+  [cdkDropListConnectedTo]="shoppingCartList">
+    <app-item [item]="item" *ngFor="let item of items" class="item"
+    cdkDrag></app-item>
   </div>
 
   <div class="items shopping-cart"
   cdkDropList (cdkDropListDropped)="drop($event)"
   [cdkDropListData]="shoppingCart"
-  [cdkDropListConnectedTo]="itemsList"
-  #shoppingCartList="cdkDropList">
+  #shoppingCartList="cdkDropList"
+  [cdkDropListConnectedTo]="itemsList">
     <app-item [item]="item" *ngFor="let item of shoppingCart"
     cdkDrag></app-item>
   </div>

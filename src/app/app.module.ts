@@ -26,7 +26,7 @@ import { PortalModule } from '@angular/cdk/portal';
     HomeComponent,
     TableComponent,
     ItemComponent,
-    ButtonComponent
+    SearchInputComponent
   ],
   imports: [
     BrowserModule,

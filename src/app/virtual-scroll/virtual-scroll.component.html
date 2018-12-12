@@ -1,7 +1,16 @@
-<cdk-virtual-scroll-viewport [itemSize]="300" style="height: 500px;">
-  <app-item [item]="item" *cdkVirtualFor="let item of items"></app-item>
-</cdk-virtual-scroll-viewport>
 
-<app-button>
-  <button class="btn btn-primary">Virtual Click</button>
-</app-button>
+<app-search-input>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2"
+        type="search" 
+        placeholder="Search For virtual scroll"
+        >
+      </form>
+</app-search-input>
+
+<cdk-virtual-scroll-viewport class="container"
+[itemSize]="300" style="height: 500px">
+  <app-item [item]="item" *cdkVirtualFor="let item of items; let i = index">
+    {{i}}
+  </app-item>
+</cdk-virtual-scroll-viewport>
